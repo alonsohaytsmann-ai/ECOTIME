@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bv1tm2f2fnbvj"]
+
+[ext_resource type="Script" uid="uid://ithyvmyniy03" path="res://minigame.gd" id="1_gdft7"]
+[ext_resource type="Texture2D" uid="uid://dnu1u3ib2yvgd" path="res://fundo.jpg" id="2_oemwr"]
+[ext_resource type="Texture2D" uid="uid://dlkr02eowkav0" path="res://caneta.webp" id="3_176e0"]
+
+[node name="lista de compras" type="Control" unique_id=573635647]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gdft7")
+
+[node name="background" type="TextureRect" parent="." unique_id=1818429238]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+offset_transform_enabled = true
+texture = ExtResource("2_oemwr")
+expand_mode = 1
+
+[node name="linha meio" type="TextureRect" parent="." unique_id=2029308718]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 139.0
+offset_right = 808.0
+offset_bottom = 638.0
+texture = ExtResource("3_176e0")
+
+[node name="mensagem" type="Label" parent="." unique_id=2038494583]
+layout_mode = 0
+offset_left = 251.0
+offset_top = 120.0
+offset_right = 874.0
+offset_bottom = 157.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="backgroundMensagem" type="ColorRect" parent="." unique_id=919088826]
+layout_mode = 0
+offset_left = 235.0
+offset_top = 104.0
+offset_right = 894.0
+offset_bottom = 171.0
+color = Color(0, 0, 0, 0.7411765)
+
+[node name="botaoesquerdo" type="Button" parent="." unique_id=1765021972]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 381.0
+offset_right = 314.0
+offset_bottom = 494.0
+
+[node name="botaodireito" type="Button" parent="." unique_id=1645626424]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 382.0
+offset_right = 903.0
+offset_bottom = 491.0
+
+[connection signal="pressed" from="botaoesquerdo" to="." method="_on_botao_esquerdo_pressed"]
+[connection signal="pressed" from="botaodireito" to="." method="_on_botao_direito_pressed"]
