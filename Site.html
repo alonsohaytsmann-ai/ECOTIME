@@ -9,13 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap" rel="stylesheet">
     <style>
+      /* Fontes responsivas com min() / clamp() */
       .texto-pixelado {
         font-family: 'Pixelify Sans', sans-serif;
-        font-size: 100px;
+        font-size: clamp(40px, 8vw, 100px);
       }
       .texto-pixelado2 {
         font-family: 'Pixelify Sans', sans-serif;
-        font-size: 45px;
+        font-size: clamp(22px, 4vw, 45px);
       }
       .retangulos {
         background-color: burlywood;
@@ -32,125 +33,158 @@
       .bg-verde-container {
         background-color: rgb(27, 109, 6);
       }
-      .foto{
-        width: 77px; 
-        height: 77px; 
-        border: 3px solid burlywood; 
+      .foto {
+        width: 50px; 
+        height: 50px; 
+        border: 2px solid burlywood; 
         border-radius: 8px;
+        object-fit: cover;
+      }
+      @media (min-width: 768px) {
+        .foto {
+          width: 77px;
+          height: 77px;
+          border-width: 3px;
+        }
+      }
+      .membro-equipe {
+        font-family: 'Pixelify Sans', sans-serif;
+        font-size: clamp(16px, 2.5vw, 22px);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 12px;
       }
     </style>
   </head>
   <body class="bg-dark text-white">
     
-    <main class="container-fluid p-3">
+    <main class="container-fluid p-2 p-md-3">
       
-      <div 
-  class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center"
-  style="background-color: darkolivegreen;"
->
-        <div class="col-md-6 p-lg-5 mx-auto my-5"
-        style="background-color: cornflowerblue;">
-          <h1 style="color: rgb(27, 112, 6);" class="texto-pixelado">Eco-Time</h1>
-          <h3 class="fw-normal text-muted mb-3">Aprendendo como a tecnologia pode ser sustentável</h3>
+      <!-- BANNER DE CABEÇALHO -->
+      <div class="position-relative overflow-hidden p-3 p-md-5 m-1 m-md-3 text-center rounded" style="background-color: rgb(27, 112, 6);">
+        <div class="col-12 col-md-8 col-lg-6 p-3 p-lg-5 mx-auto my-2 my-md-5 rounded" style="background-color: burlywood;">
+          <h1 style="color: rgb(27, 112, 6);" class="texto-pixelado mb-2">Eco-Time</h1>
+          <h3 class="fw-normal mb-0 texto-pixelado2 text-dark">Aprendendo como a tecnologia pode ser sustentável</h3>
         </div>
       </div>
-      <div class="row g-3 my-3 bg-verde-container p-3 rounded mx-1">
-        <div class="col-md-6">
-          <div class="card-bg-custom p-3 text-center rounded">
+
+      <!-- SEÇÃO 1: GAMEPLAY E CENÁRIOS -->
+      <div class="row g-3 my-3 bg-verde-container p-2 p-md-3 rounded mx-0 mx-md-1">
+        <div class="col-12 col-md-6">
+          <div class="card-bg-custom p-3 text-center rounded h-100">
             <div class="retangulos">
-              <h2 class="texto-pixelado2">Gameplay</h2>
+              <h2 class="texto-pixelado2 m-0">Gameplay</h2>
             </div>
-            <div class="retangulos2 mx-auto" style="width: 80%; height: 350px; border-radius: 21px 21px 0 0;"></div>
+            <div class="retangulos2 mx-auto mt-2 w-100" style="height: 300px; max-height: 350px; border-radius: 12px 12px 0 0;"></div>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="card-bg-custom p-3 text-center rounded">
+        <div class="col-12 col-md-6">
+          <div class="card-bg-custom p-3 text-center rounded h-100">
             <div class="retangulos">
-              <h2 class="texto-pixelado2">Cenários</h2>
+              <h2 class="texto-pixelado2 m-0">Cenários</h2>
             </div>
-            <div class="bg-dark mx-auto" style="width: 80%; height: 350px; border-radius: 21px 21px 0 0;"></div>
+            <div class="bg-dark mx-auto mt-2 w-100" style="height: 300px; max-height: 350px; border-radius: 12px 12px 0 0;"></div>
           </div>
         </div>
       </div>
 
-     
-      <div class="row g-3 my-3 bg-verde-container p-3 rounded mx-1">
+      <!-- SEÇÃO 2: STORYBOARDS E (EQUIPE + GITHUB + SINOPSE) -->
+      <div class="row g-3 my-3 bg-verde-container p-2 p-md-3 rounded mx-0 mx-md-1">
         
-        <div class="col-md-6">
-          <div class="card-bg-custom p-3 text-center rounded h-100 d-flex flex-column justify-content-between">
+        <!-- STORYBOARDS -->
+        <div class="col-12 col-lg-6">
+          <div class="card-bg-custom p-3 text-center rounded h-100 d-flex flex-column">
             <div class="retangulos">
-              <h2 class="texto-pixelado2">Storyboards</h2>
-              <div id="carouselExample" class="carousel slide">
+              <h2 class="texto-pixelado2 m-0">Storyboards</h2>
+            </div>
+            <div class="bg-secondary mx-auto mt-2 w-100 p-2 overflow-hidden flex-grow-1" style="border-radius: 12px 12px 0 0; min-height: 280px;">
+              <div id="carouselExample" class="carousel slide h-100 d-flex align-items-center">
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="Captura de tela 2026-10-01 005058.png" class="d-block w-100" alt="...">
+                    <img src="Captura de tela 2026-10-01 005058.png" class="d-block w-100 rounded" style="max-height: 400px; object-fit: contain;" alt="Storyboard 1">
                   </div>
                   <div class="carousel-item">
-                    <img src="Captura de tela 2026-10-01 005109.png" class="d-block w-100" alt="...">
+                    <img src="Captura de tela 2026-10-01 005109.png" class="d-block w-100 rounded" style="max-height: 400px; object-fit: contain;" alt="Storyboard 2">
                   </div>
                   <div class="carousel-item">
-                    <img src="Captura de tela 2026-10-01 005119.png" class="d-block w-100" alt="...">
+                    <img src="Captura de tela 2026-10-01 005119.png" class="d-block w-100 rounded" style="max-height: 400px; object-fit: contain;" alt="Storyboard 3">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                  <span class="visually-hidden">Anterior</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Próximo</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
 
-        <div class="col-md-6">
-          <div class="p-3 rounded bg-dark h-100">
+        <div class="col-12 col-lg-6">
+          <div class="p-2 p-md-3 rounded bg-dark h-100">
             <div class="row g-3 h-100">
               
-              <div class="col-6">
+              <!-- EQUIPE -->
+              <div class="col-12 col-md-6">
                 <div class="card-bg-custom p-2 text-center rounded h-100 d-flex flex-column">
                   <div class="retangulos">
                     <h3 class="texto-pixelado2 fs-4 mb-0">Equipe</h3>
                   </div>
-                  <div class="bg-secondary mx-auto mt-2 w-100" style="flex-grow: 1; border-radius: 12px 12px 0 0; min-height: 350px;">
-                    <p class="texto-pixelado2" style="text-align: left; font-size: x-large;"><img src="Captura de tela 2026-10-01 002649.png" class="foto">Tiago Tramontin de Paula</p>
-                    <p class="texto-pixelado2" style="text-align: end; font-size: x-large;">Leonardo Carvalho Dorti<img src="Captura de tela 2026-10-01 002718.png" class="foto"></p>
-                    <p class="texto-pixelado2" style="text-align: left; font-size: x-large;"><img src="Captura de tela 2026-10-01 002734.png" class="foto">Alonso Freitas Haytsmann</p>
-                    <p class="texto-pixelado2" style="text-align: end; font-size: x-large;">Rodrigo Santos Araújo<img src="Captura de tela 2026-10-01 002746.png" class="foto"></p>
-                    <p class="texto-pixelado2" style="text-align: left; font-size: x-large;"><img src="Captura de tela 2026-10-01 002758.png" class="foto">Eric sla o que</p>
+                  <div class="bg-secondary mx-auto mt-2 w-100 p-2 flex-grow-1" style="border-radius: 12px 12px 0 0; min-height: 280px;">
+                    <div class="membro-equipe justify-content-start">
+                      <img src="Captura de tela 2026-10-01 002649.png" class="foto">
+                      <span>Tiago Tramontin</span>
+                    </div>
+                    <div class="membro-equipe justify-content-end text-end">
+                      <span>Leonardo Carvalho</span>
+                      <img src="Captura de tela 2026-10-01 002718.png" class="foto">
+                    </div>
+                    <div class="membro-equipe justify-content-start">
+                      <img src="Captura de tela 2026-10-01 002734.png" class="foto">
+                      <span>Alonso Haytsmann</span>
+                    </div>
+                    <div class="membro-equipe justify-content-end text-end">
+                      <span>Rodrigo Santos</span>
+                      <img src="Captura de tela 2026-10-01 002746.png" class="foto">
+                    </div>
+                    <div class="membro-equipe justify-content-start">
+                      <img src="Captura de tela 2026-10-01 002758.png" class="foto">
+                      <span>Eric sla o que</span>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div class="col-6 d-flex flex-column gap-3">
-                
-                <div class="card-bg-custom p-2 text-center rounded">
-                  <div class="retangulos">
-                    <h3 class="texto-pixelado2 fs-4 mb-0">Github</h3>
-                  </div>
-                  <div class="bg-secondary mx-auto mt-2 d-flex align-items-center justify-content-center" style="width: 100%; height: 160px; border-radius: 12px 12px 0 0;">
-                    <a href="https://github.com/alonsohaytsmann-ai/ECOTIME/tree/main" target="_blank" rel="noopener noreferrer">
-                      <img src="github.webp" style="height: 80px;">
-                    </a>
-                  </div>
-                </div>
-
-                <div class="card-bg-custom p-2 text-center rounded">
-                  <div class="retangulos">
-                    <h3 class="texto-pixelado2 fs-4 mb-0">Sinopse</h3>
-                  </div>
-                  <div class="bg-secondary mx-auto mt-2" style="width: 100%; height: 240px; border-radius: 12px 12px 0 0;"></div>
-                </div>
-
-              </div>
-
+        <div class="col-12 col-md-6 d-flex flex-column justify-content-between gap-3">
+  
+          <div class="card-bg-custom p-2 text-center rounded">
+            <div class="retangulos">
+              <h3 class="texto-pixelado2 fs-4 mb-0">Github</h3>
+            </div>
+            <div class="bg-secondary mx-auto mt-2 d-flex align-items-center justify-content-center w-100" style="height: 120px; border-radius: 12px 12px 0 0;">
+              <a href="https://github.com/alonsohaytsmann-ai/ECOTIME/tree/main" target="_blank" rel="noopener noreferrer">
+                <img src="github.webp" style="height: 60px;">
+              </a>
             </div>
           </div>
-        </div>
 
+          <div class="card-bg-custom p-2 text-center rounded flex-grow-1 d-flex flex-column">
+            <div class="retangulos">
+              <h3 class="texto-pixelado2 fs-4 mb-0">Sinopse</h3>
+            </div>
+            <div class="bg-secondary mx-auto mt-2 w-100 flex-grow-1" style="border-radius: 12px 12px 0 0; min-height: 150px;"></div>
+          </div>
+
+        </div>
       </div>
+    </div>
+  </div>
+
+</div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
