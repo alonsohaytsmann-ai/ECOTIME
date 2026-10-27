@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://ucdwbkofau7a"]
+
+[ext_resource type="Texture2D" uid="uid://cgl73pnrew3mi" path="res://images.jpg" id="1_lfv8t"]
+[ext_resource type="Texture2D" uid="uid://cyytaenksr1cj" path="res://istockphoto-894875516-612x612.jpg" id="2_07fep"]
+[ext_resource type="Script" uid="uid://cqhb4l1qvy5wu" path="res://button_ruim.gd" id="2_koe1e"]
+[ext_resource type="Script" uid="uid://dvqfbuoxny2w0" path="res://button.gd" id="4_60s2y"]
+
+[node name="Node2D" type="Node2D" unique_id=586073940]
+
+[node name="Button ruim" type="Button" parent="." unique_id=649958553]
+offset_left = 347.50003
+offset_top = 38.750023
+offset_right = 446.75003
+offset_bottom = 140.00003
+icon = ExtResource("2_07fep")
+expand_icon = true
+script = ExtResource("2_koe1e")
+
+[node name="Button ruim2" type="Button" parent="." unique_id=1361932022]
+offset_left = 347.50003
+offset_top = 38.750023
+offset_right = 446.75003
+offset_bottom = 140.00003
+icon = ExtResource("2_07fep")
+expand_icon = true
+script = ExtResource("2_koe1e")
+
+[node name="Button ruim3" type="Button" parent="." unique_id=1950481202]
+offset_left = 347.50003
+offset_top = 38.750023
+offset_right = 446.75003
+offset_bottom = 140.00003
+icon = ExtResource("2_07fep")
+expand_icon = true
+script = ExtResource("2_koe1e")
+
+[node name="Button ruim4" type="Button" parent="." unique_id=1523361999]
+offset_left = 347.50003
+offset_top = 38.750023
+offset_right = 446.75003
+offset_bottom = 140.00003
+icon = ExtResource("2_07fep")
+expand_icon = true
+script = ExtResource("2_koe1e")
+
+[node name="Button ruim5" type="Button" parent="." unique_id=1323339480]
+offset_left = 347.50003
+offset_top = 38.750023
+offset_right = 446.75003
+offset_bottom = 140.00003
+icon = ExtResource("2_07fep")
+expand_icon = true
+script = ExtResource("2_koe1e")
+
+[node name="Button" type="Button" parent="." unique_id=315650742]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button2" type="Button" parent="." unique_id=1917048375]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button3" type="Button" parent="." unique_id=627746468]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button4" type="Button" parent="." unique_id=57651765]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button5" type="Button" parent="." unique_id=289632681]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button6" type="Button" parent="." unique_id=644971565]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button7" type="Button" parent="." unique_id=1490730934]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button8" type="Button" parent="." unique_id=221377526]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button9" type="Button" parent="." unique_id=1131633674]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button10" type="Button" parent="." unique_id=44972273]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button11" type="Button" parent="." unique_id=1078552512]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button12" type="Button" parent="." unique_id=1486713339]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button13" type="Button" parent="." unique_id=1975891113]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button14" type="Button" parent="." unique_id=2144561612]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button15" type="Button" parent="." unique_id=2064801534]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")
+
+[node name="Button16" type="Button" parent="." unique_id=669529455]
+offset_left = 66.25
+offset_top = 33.750023
+offset_right = 174.25
+offset_bottom = 146.25003
+icon = ExtResource("1_lfv8t")
+expand_icon = true
+script = ExtResource("4_60s2y")

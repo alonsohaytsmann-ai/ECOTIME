@@ -1,0 +1,291 @@
+[gd_scene format=3 uid="uid://b2hyspd1ku0wj"]
+
+[ext_resource type="Script" uid="uid://bck0e7aqrm3ps" path="res://tela_dificuldade.gd" id="1_pc5c2"]
+[ext_resource type="Texture2D" uid="uid://cbak47rjbwa11" path="res://imagens menu dificuldade/Modos-menu.png" id="2_vs13s"]
+[ext_resource type="Texture2D" uid="uid://d142kk6csueif" path="res://imagens menu dificuldade/Dificuldade-mode-button.png" id="3_plcbk"]
+[ext_resource type="FontFile" uid="uid://i48j3w3wldbg" path="res://PressStart2P-Regular.ttf" id="4_cs554"]
+[ext_resource type="Texture2D" uid="uid://3g4e7viax41t" path="res://imagens menu dificuldade/Facil-mode-button.png" id="5_lk627"]
+[ext_resource type="Texture2D" uid="uid://cdx8fd4dm0dgd" path="res://imagens menu dificuldade/Normal-mode-button.png" id="6_iboe3"]
+[ext_resource type="Texture2D" uid="uid://2xyvhlercwmw" path="res://imagens menu dificuldade/Dificil-mode-button.png" id="7_oexwp"]
+[ext_resource type="Texture2D" uid="uid://e8pncqd231ij" path="res://imagens menu dificuldade/confere-lista1.png" id="8_0o2xg"]
+[ext_resource type="Texture2D" uid="uid://dkl3colwdoshk" path="res://imagens menu dificuldade/impossivel-mode-button.png" id="8_ahp4y"]
+[ext_resource type="Texture2D" uid="uid://daic6tccqi5qk" path="res://imagens menu dificuldade/voltar-mode-button.png" id="9_0o2xg"]
+[ext_resource type="Texture2D" uid="uid://btfx1woxq5l5v" path="res://imagens menu dificuldade/confere-lista2.png" id="9_drs14"]
+[ext_resource type="Texture2D" uid="uid://bbp5it2a7xltx" path="res://imagens menu dificuldade/confere-lista3.png" id="10_2wef4"]
+[ext_resource type="Texture2D" uid="uid://vioio0qviw10" path="res://imagens menu dificuldade/confere-lista4.png" id="11_cdygl"]
+[ext_resource type="Texture2D" uid="uid://c0o0u0e5rwpcy" path="res://imagens menu dificuldade/confere-lista5.png" id="12_nd6l4"]
+[ext_resource type="Texture2D" uid="uid://bpc8448m1vy3k" path="res://imagens menu dificuldade/confere-lista6.png" id="13_xotr2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0o2xg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0o2xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_drs14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2wef4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cdygl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nd6l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xotr2")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 20.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o17w5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0o2xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_drs14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2wef4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cdygl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nd6l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xotr2")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_osm33"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0o2xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_drs14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2wef4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cdygl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nd6l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xotr2")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 20.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_0o2xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_drs14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2wef4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cdygl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_nd6l4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xotr2")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 20.0
+}]
+
+[node name="Tela_dificuldade" type="Control" unique_id=157694386]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_pc5c2")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2070273775]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("2_vs13s")
+expand_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=478995213]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -214.0
+offset_top = -256.0
+offset_right = 220.0
+offset_bottom = 291.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=225707892]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=1679419641]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=481146133]
+layout_mode = 0
+offset_left = 11.999997
+offset_top = 144.00002
+offset_right = 200.82353
+offset_bottom = 181.56929
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("3_plcbk")
+expand_mode = 5
+stretch_mode = 6
+
+[node name="Facil2" type="TextureRect" parent="." unique_id=2082462517]
+layout_mode = 0
+offset_left = 401.0
+offset_top = 105.0
+offset_right = 584.0
+offset_bottom = 166.0
+scale = Vector2(2, 2)
+texture = ExtResource("5_lk627")
+
+[node name="Medio2" type="TextureRect" parent="." unique_id=1148688001]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 218.0
+offset_right = 579.0
+offset_bottom = 279.0
+scale = Vector2(2, 2)
+texture = ExtResource("6_iboe3")
+
+[node name="Dificil2" type="TextureRect" parent="." unique_id=130372532]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 310.0
+offset_right = 577.0
+offset_bottom = 371.0
+scale = Vector2(2, 2)
+texture = ExtResource("7_oexwp")
+
+[node name="Impossivel2" type="TextureRect" parent="." unique_id=1592839671]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 432.0
+offset_right = 577.0
+offset_bottom = 481.0
+scale = Vector2(2, 2)
+texture = ExtResource("8_ahp4y")
+
+[node name="Voltar" type="Button" parent="." unique_id=529137360]
+layout_mode = 0
+offset_left = 633.0
+offset_top = 539.0
+offset_right = 710.0
+offset_bottom = 567.0
+scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("4_cs554")
+icon = ExtResource("9_0o2xg")
+flat = true
+
+[node name="facil" type="Button" parent="." unique_id=1164568470]
+layout_mode = 0
+offset_left = 706.0
+offset_top = 146.0
+offset_right = 755.0
+offset_bottom = 193.0
+flat = true
+
+[node name="medio" type="Button" parent="." unique_id=161201814]
+layout_mode = 0
+offset_left = 707.0
+offset_top = 252.0
+offset_right = 755.0
+offset_bottom = 299.0
+flat = true
+
+[node name="dificil" type="Button" parent="." unique_id=1818135289]
+layout_mode = 0
+offset_left = 708.0
+offset_top = 353.0
+offset_right = 756.0
+offset_bottom = 400.0
+flat = true
+
+[node name="impossivel" type="Button" parent="." unique_id=2028689586]
+layout_mode = 0
+offset_left = 709.0
+offset_top = 455.0
+offset_right = 756.0
+offset_bottom = 503.0
+flat = true
+
+[node name="animacao facil" type="AnimatedSprite2D" parent="." unique_id=133958539]
+position = Vector2(729.5, 171)
+scale = Vector2(1.4687489, 1.532)
+sprite_frames = SubResource("SpriteFrames_0o2xg")
+
+[node name="animacao medio" type="AnimatedSprite2D" parent="." unique_id=1529435879]
+position = Vector2(730, 276)
+scale = Vector2(1.53125, 1.7187502)
+sprite_frames = SubResource("SpriteFrames_o17w5")
+
+[node name="animacao dificil" type="AnimatedSprite2D" parent="." unique_id=1060026722]
+position = Vector2(729.99994, 379)
+scale = Vector2(1.4999995, 1.532)
+sprite_frames = SubResource("SpriteFrames_osm33")
+
+[node name="animacao impossivel" type="AnimatedSprite2D" parent="." unique_id=378114021]
+position = Vector2(733, 481.00003)
+scale = Vector2(1.5937485, 1.7500012)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+
+[connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="pressed" from="facil" to="." method="_on_facil_pressed"]
+[connection signal="pressed" from="medio" to="." method="_on_medio_pressed"]
+[connection signal="pressed" from="dificil" to="." method="_on_dificil_pressed"]
+[connection signal="pressed" from="impossivel" to="." method="_on_impossivel_pressed"]
+[connection signal="animation_finished" from="animacao facil" to="." method="_on_animacao_facil_animation_finished"]
+[connection signal="animation_finished" from="animacao medio" to="." method="_on_animacao_medio_animation_finished"]
+[connection signal="animation_finished" from="animacao dificil" to="." method="_on_animacao_dificil_animation_finished"]
+[connection signal="animation_finished" from="animacao impossivel" to="." method="_on_animacao_impossivel_animation_finished"]

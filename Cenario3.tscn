@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://b1w8s65qje8ji"]
+
+[ext_resource type="Script" uid="uid://bw3gnyj02knxt" path="res://node_2d.gd" id="1_gsiby"]
+[ext_resource type="Texture2D" uid="uid://m0qoef0cohh1" path="res://imagens cenario 3/cenario3.png" id="2_nhml7"]
+[ext_resource type="PackedScene" uid="uid://ds4ihapjbp64s" path="res://timer.tscn" id="3_nhml7"]
+
+[node name="Node2D" type="Control" unique_id=1691047272]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gsiby")
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=560354382]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 3444.0005
+offset_bottom = 1832.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.25065273, 0.26129034)
+texture = ExtResource("2_nhml7")
+expand_mode = 2
+
+[node name="Button" type="Button" parent="." unique_id=2022047377]
+layout_mode = 0
+offset_left = 600.0
+offset_top = -1.0
+offset_right = 1051.0
+offset_bottom = 366.0
+flat = true
+
+[node name="CanvasLayer" parent="." unique_id=1771017111 instance=ExtResource("3_nhml7")]
+layout_mode = 1
+
+[node name="Button2" type="Button" parent="." unique_id=1327242016]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 272.0
+offset_right = 403.0
+offset_bottom = 352.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cp3xke3mhyw51"]
+
+[ext_resource type="Script" uid="uid://cm6lenciy3ehu" path="res://cenario_2.gd" id="1_lpspd"]
+[ext_resource type="Texture2D" uid="uid://3mv4hg2p4grw" path="res://imagens cenario 2/Cenario1v2-gaveta1fechada.jpg" id="2_j0iy8"]
+[ext_resource type="Texture2D" uid="uid://isd1oqa85rhm" path="res://imagens cenario 2/chave-saida.png" id="3_j0iy8"]
+[ext_resource type="FontFile" uid="uid://i48j3w3wldbg" path="res://PressStart2P-Regular.ttf" id="4_e1wnu"]
+[ext_resource type="PackedScene" uid="uid://ds4ihapjbp64s" path="res://timer.tscn" id="5_j0iy8"]
+
+[node name="Node2D" type="Control" unique_id=2017067163]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lpspd")
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=467414015]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 829.9999
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.37499997, 0.43843034)
+texture = ExtResource("2_j0iy8")
+expand_mode = 2
+
+[node name="Porta_Cenario1" type="Button" parent="." unique_id=715597991]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 211.0
+offset_right = 187.0
+offset_bottom = 554.0
+flat = true
+
+[node name="Porta_Cenario4" type="Button" parent="." unique_id=248419242]
+layout_mode = 0
+offset_left = 969.0
+offset_top = 210.0
+offset_right = 1118.0
+offset_bottom = 501.0
+flat = true
+
+[node name="Porta_Cenario3" type="Button" parent="." unique_id=2012321510]
+layout_mode = 0
+offset_left = 524.0
+offset_top = 237.0
+offset_right = 633.0
+offset_bottom = 483.0
+flat = true
+
+[node name="Chave" type="Button" parent="." unique_id=1319036880]
+layout_mode = 0
+offset_left = 311.0
+offset_top = 400.0
+offset_right = 351.0
+offset_bottom = 440.0
+rotation = -2.591814
+icon = ExtResource("3_j0iy8")
+flat = true
+
+[node name="Porta bloqueada" type="Label" parent="." unique_id=2065857711]
+visible = false
+layout_mode = 0
+offset_left = 408.0
+offset_top = 517.0
+offset_right = 744.0
+offset_bottom = 540.0
+theme_override_fonts/font = ExtResource("4_e1wnu")
+text = "A PORTA ESTA TRANCADA"
+metadata/_edit_lock_ = true
+
+[node name="Timer porta" type="Timer" parent="Porta bloqueada" unique_id=6277318]
+one_shot = true
+
+[node name="Chave possuida" type="Label" parent="." unique_id=656712451]
+visible = false
+layout_mode = 0
+offset_left = 373.0
+offset_top = 518.0
+offset_right = 693.0
+offset_bottom = 541.0
+theme_override_fonts/font = ExtResource("4_e1wnu")
+text = "VOCE PEGOU UMA CHAVE"
+metadata/_edit_lock_ = true
+
+[node name="Timer chave" type="Timer" parent="Chave possuida" unique_id=252004122]
+one_shot = true
+
+[node name="CanvasLayer" parent="." unique_id=1771017111 instance=ExtResource("5_j0iy8")]
+layout_mode = 1
+
+[connection signal="pressed" from="Porta_Cenario1" to="." method="_on_porta_cenario_1_pressed"]
+[connection signal="pressed" from="Porta_Cenario4" to="." method="_on_porta_cenario_4_pressed"]
+[connection signal="pressed" from="Porta_Cenario3" to="." method="_on_porta_cenario_3_pressed"]
+[connection signal="pressed" from="Chave" to="." method="_on_chave_pressed"]
+[connection signal="timeout" from="Porta bloqueada/Timer porta" to="." method="_on_timer_porta_timeout"]
+[connection signal="timeout" from="Chave possuida/Timer chave" to="." method="_on_timer_chave_timeout"]

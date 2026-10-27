@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://dpj1hr5doe0l8"]
+
+[ext_resource type="Script" uid="uid://cufgjr127iqn2" path="res://cenario_1.gd" id="1_b1mk4"]
+[ext_resource type="Texture2D" uid="uid://blypd8ytvtkx0" path="res://imagens cenario 1/cenario2v2.jpg" id="2_l1kl8"]
+[ext_resource type="PackedScene" uid="uid://ds4ihapjbp64s" path="res://timer.tscn" id="3_l1kl8"]
+
+[node name="Node2D" type="Control" unique_id=771549278]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b1mk4")
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=2009051630]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 895.9999
+offset_bottom = 457.00012
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5625, 0.58642524)
+texture = ExtResource("2_l1kl8")
+expand_mode = 2
+
+[node name="Minigame 1" type="Button" parent="." unique_id=923030004]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 213.0
+offset_top = 208.0
+offset_right = -778.0
+offset_bottom = -331.0
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Porta" type="Button" parent="." unique_id=1648216093]
+layout_mode = 0
+offset_left = 787.0
+offset_top = 21.0
+offset_right = 1016.0
+offset_bottom = 456.0
+flat = true
+
+[node name="CanvasLayer" parent="." unique_id=1771017111 instance=ExtResource("3_l1kl8")]
+layout_mode = 1
+
+[connection signal="pressed" from="Minigame 1" to="." method="_on_minigame_1_pressed"]
+[connection signal="pressed" from="Porta" to="." method="_on_porta_pressed"]

@@ -1,0 +1,94 @@
+[gd_scene format=3 uid="uid://moiocstdhw4w"]
+
+[ext_resource type="Texture2D" uid="uid://gu2xejokwh0g" path="res://imagens garagem/lixeira-correta.png" id="1_0t0ik"]
+[ext_resource type="Script" uid="uid://ctv80h8gfxjcu" path="res://sprite_2d.gd" id="1_7sqpu"]
+[ext_resource type="Texture2D" uid="uid://dx67ndigpcfiw" path="res://icon.svg" id="2_g2nyw"]
+[ext_resource type="Texture2D" uid="uid://becwk1pi4tbsd" path="res://imagens garagem/lixeira-errada.png" id="2_umdwx"]
+[ext_resource type="Texture2D" uid="uid://co8vr0b821jpu" path="res://imagens desligar pc/bloco-minigame1.png" id="5_umdwx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j7jb1"]
+size = Vector2(19.99999, 24.400024)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ilb3f"]
+size = Vector2(20.558788, 24.800003)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l7tio"]
+size = Vector2(132, 130)
+
+[node name="Node2D" type="Control" unique_id=1396047174]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Lixo1" type="Sprite2D" parent="." unique_id=492516195]
+position = Vector2(288, 525)
+scale = Vector2(9, 9)
+texture = ExtResource("1_0t0ik")
+
+[node name="Area1" type="Area2D" parent="Lixo1" unique_id=1749345907]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lixo1/Area1" unique_id=1875641647]
+position = Vector2(-7.6293945e-06, -0.06285095)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_j7jb1")
+metadata/_edit_lock_ = true
+
+[node name="Lixo2" type="Sprite2D" parent="." unique_id=77602167]
+position = Vector2(864, 525)
+scale = Vector2(9, 9)
+texture = ExtResource("2_umdwx")
+
+[node name="Area2" type="Area2D" parent="Lixo2" unique_id=589403537]
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lixo2/Area2" unique_id=2114342023]
+position = Vector2(-0.12062073, 0)
+scale = Vector2(0.9999996, 0.99999976)
+shape = SubResource("RectangleShape2D_ilb3f")
+metadata/_edit_lock_ = true
+
+[node name="Arrastavel" type="CharacterBody2D" parent="." unique_id=2015804916]
+position = Vector2(576, 162)
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_7sqpu")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Arrastavel" unique_id=119784682]
+scale = Vector2(10, 10)
+shape = SubResource("RectangleShape2D_l7tio")
+metadata/_edit_lock_ = true
+
+[node name="Button" type="Button" parent="Arrastavel/CollisionShape2D" unique_id=930021376]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -70.55554
+offset_top = -68.888885
+offset_right = 70.44446
+offset_bottom = 70.111115
+grow_horizontal = 2
+grow_vertical = 2
+flat = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Arrastavel" unique_id=1832682583]
+texture = ExtResource("2_g2nyw")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1151808957]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=964043125]
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1121459288]
+position = Vector2(575.99994, 324)
+scale = Vector2(4.4999995, 2.531)
+texture = ExtResource("5_umdwx")
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="Lixo1/Area1" to="Arrastavel" method="_on_area_1_body_entered"]
+[connection signal="body_entered" from="Lixo2/Area2" to="Arrastavel" method="_on_area_2_body_entered"]
+[connection signal="button_down" from="Arrastavel/CollisionShape2D/Button" to="Arrastavel" method="_on_button_button_down"]
+[connection signal="button_up" from="Arrastavel/CollisionShape2D/Button" to="Arrastavel" method="_on_button_button_up"]
