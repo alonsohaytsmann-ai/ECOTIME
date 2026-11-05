@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://cd5xrld52qr6h"]
+
+[ext_resource type="Texture2D" uid="uid://dhdhxk1dxhni3" path="res://alonsohaytsmann-ai ECOTIME main Sprites-Sprite minigame rodrigo 2/notebook.png" id="1_g5l6w"]
+[ext_resource type="Script" uid="uid://3mkogepbrhcb" path="res://notebook.gd" id="2_i8w2w"]
+[ext_resource type="Texture2D" uid="uid://defmcrkkdc3c0" path="res://alonsohaytsmann-ai ECOTIME main Sprites-Sprite minigame rodrigo 2/Parafuso-menor.png" id="3_2wy0l"]
+[ext_resource type="Texture2D" uid="uid://dt32s340hjysp" path="res://alonsohaytsmann-ai ECOTIME main Sprites-Sprite minigame rodrigo 2/Parafuso-maior1.png" id="4_g5l6w"]
+[ext_resource type="Texture2D" uid="uid://dqs8nnf3jrb3x" path="res://Chave-de-fenda.png" id="4_n8bdy"]
+[ext_resource type="Texture2D" uid="uid://cooec84cjhlko" path="res://alonsohaytsmann-ai ECOTIME main Sprites-Sprite minigame rodrigo 2/Parafuso-maior2.png" id="5_3ukq0"]
+[ext_resource type="Texture2D" uid="uid://cvc341m4dmums" path="res://alonsohaytsmann-ai ECOTIME main Sprites-Sprite minigame rodrigo 2/Parafuso-maior3.png" id="6_jgqkt"]
+[ext_resource type="Texture2D" uid="uid://ccjafka1wdnqc" path="res://alonsohaytsmann-ai ECOTIME main Sprites-Sprite minigame rodrigo 2/Parafuso-maior4.png" id="7_rycwx"]
+[ext_resource type="Texture2D" uid="uid://b32hs5ihglig7" path="res://alonsohaytsmann-ai ECOTIME main Sprites-Sprite minigame rodrigo 2/Parafuso-maior5.png" id="8_g4vol"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3ymf"]
+atlas = ExtResource("3_2wy0l")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i210l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_g5l6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_3ukq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_jgqkt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_rycwx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_g4vol")
+}],
+"loop": 0,
+"name": &"girando",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wy0l"]
+atlas = ExtResource("4_n8bdy")
+
+[node name="Control" type="Control" unique_id=1745878341]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="notebook" type="TextureRect" parent="." unique_id=320024641]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 176.0
+offset_top = -104.0
+offset_right = -160.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_g5l6w")
+expand_mode = 1
+script = ExtResource("2_i8w2w")
+
+[node name="Button" type="Button" parent="notebook" unique_id=625915647]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 208.0
+offset_right = 104.0
+offset_bottom = 248.0
+icon = ExtResource("3_2wy0l")
+flat = true
+
+[node name="Button2" type="Button" parent="notebook" unique_id=664868612]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 584.0
+offset_right = 760.0
+offset_bottom = 624.0
+icon = SubResource("AtlasTexture_x3ymf")
+flat = true
+
+[node name="Button3" type="Button" parent="notebook" unique_id=1804780785]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.007
+anchor_bottom = 0.012
+offset_left = 720.0
+offset_top = 200.0
+offset_right = 754.288
+offset_bottom = 230.20801
+icon = ExtResource("3_2wy0l")
+flat = true
+
+[node name="Button4" type="Button" parent="notebook" unique_id=771153106]
+layout_mode = 0
+offset_left = 400.0
+offset_top = 208.0
+offset_right = 440.0
+offset_bottom = 248.0
+icon = ExtResource("3_2wy0l")
+flat = true
+
+[node name="Button5" type="Button" parent="notebook" unique_id=275291053]
+layout_mode = 0
+offset_left = 56.0
+offset_top = 568.0
+offset_right = 96.0
+offset_bottom = 608.0
+icon = ExtResource("3_2wy0l")
+flat = true
+
+[node name="parafuso" type="AnimatedSprite2D" parent="notebook" unique_id=2089569194]
+position = Vector2(576, 0)
+scale = Vector2(1.344005, 1.2841574)
+sprite_frames = SubResource("SpriteFrames_i210l")
+animation = &"girando"
+
+[node name="chavinha" type="TextureRect" parent="notebook" unique_id=1899411391]
+visible = false
+layout_mode = 0
+offset_left = 848.0
+offset_top = -128.0
+offset_right = 1232.0
+offset_bottom = 256.0
+pivot_offset = Vector2(48, 336)
+texture = SubResource("AtlasTexture_2wy0l")
+
+[connection signal="pressed" from="notebook/Button" to="notebook" method="_on_button_pressed"]
